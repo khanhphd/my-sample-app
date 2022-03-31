@@ -1,0 +1,29 @@
+{
+  "name": "my-sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-all": "npm run mocha",
+    "mocha": "mocha --timeout 10000",
+    "start": "node src/index.js",
+    "local": "nodemon src/index.js"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "nodejs"
+  ],
+  "author": "khanhpham1091@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
