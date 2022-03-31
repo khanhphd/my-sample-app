@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-all": "npm run mocha",
+    "test": "npm run mocha",
     "mocha": "mocha --timeout 10000",
     "start": "node src/index.js",
     "local": "nodemon src/index.js"
