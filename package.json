@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run mocha",
+    "github-action-test": "mocha --timeout 10000 --reporter json > test-results.json",
     "mocha": "mocha --timeout 10000",
     "start": "node src/index.js",
     "local": "nodemon src/index.js"
