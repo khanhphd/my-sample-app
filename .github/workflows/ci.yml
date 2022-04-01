@@ -29,3 +29,18 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+    - name: Upload test results
+        if: success() || failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: __tests__/__results__/*.xml
+
+      - name: Create test report
+        uses: ./
+        if: success() || failure()
+        with:
+          name: JEST Tests
+          path: __tests__/__results__/*.xml
+          reporter: jest-junit
