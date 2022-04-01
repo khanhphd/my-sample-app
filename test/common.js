@@ -31,6 +31,24 @@ describe('Test if server is ready', () => {
     })
 })
 
+describe('Failed test example', () => {
+
+    beforeEach((done) => {
+        done()
+    })
+
+    describe('Get something which is not present', () => {
+        it('Get users', done => {
+            chai.request(server)
+                .get('/users')
+                .end((err, res) => {
+                    res.should.have.status(200)
+                    done()
+                })
+        })
+    })
+})
+
 after(done=>{
     done()
     process.exit(0)

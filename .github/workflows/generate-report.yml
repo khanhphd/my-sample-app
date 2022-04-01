@@ -1,14 +1,14 @@
-name: Test Report
+name: Generate Test Report
 
 on:
   workflow_run:
-    workflows: ['CI']
+    workflows: ['Build & Test']
     types:
       - completed
 
 jobs:
   report:
-    name: Workflow test
+    name: Generate mocha test report
     runs-on: ubuntu-latest
     steps:
     - uses: dorny/test-reporter@v1
