@@ -7,4 +7,17 @@ app.get("/public/ping", (req, res, next) => {
     })
 })
 
+app.get("/hello", (req, res, next) => {
+    res.status(200).json({
+        message: "Hello"
+    })
+})
+
+app.get("/", (req, res, next) => {
+    res.status(404).json({
+        message: "Not Found"
+    })
+})
+
+
 module.exports = app
